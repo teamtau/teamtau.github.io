@@ -1,6 +1,8 @@
-title: TEAMTAU an software developing team
+title: TEAMTAU software and devops
 
 plugins:
     - jekyll-minifier
     - jekyll-seo-tag
     - jekyll-feed
+    - jekyll_version_plugin
+
