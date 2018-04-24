@@ -4,5 +4,5 @@ plugins:
     - jekyll-minifier
     - jekyll-seo-tag
     - jekyll-feed
-    - jekyll_version_plugin
+#    - jekyll_version_plugin
 
