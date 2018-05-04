@@ -97,3 +97,69 @@ React, React native, Nodejs, Devops, CI/CD, Ansible, AWS..</p>
     </div> <!-- /.container -->
 </section>
 
+<!-- Section 6 -->
+<section id="section-6" class="portfolio no-padding">
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Begin masonry -->
+            <div class="masonry popup-gallery">
+
+                <!-- Begin portfolio heading -->
+                <div class="box col-md-4 col-sm-6">
+                    <div class="box-inner portfolio-heading">
+                        <div class="cover"></div>
+                        <img src="assets/img/portfolio/portfolio-heading-img.jpg" alt="image">
+                        <!-- Begin Heading -->
+                        <div class="heading heading-md align-center">
+                            <h1><span class="bg-main text-white">P</span>ortfolio</h1>
+                        </div>
+                        <!-- End Heading -->
+                    </div>
+                </div>
+                <!-- End portfolio heading -->
+
+                {% for post in site.categories.portfolio %}
+                <!-- Begin portfolio grid box  -->
+                <div class="box box-1 col-md-4 col-sm-6">
+                    <div class="box-inner">
+                        <a href="#portfolio-1" class="portfolio-link inline-popup-trigger"></a>
+                        <div class="cover"></div>
+                        <img class="thumbnail" src="{{post.thumbnail}}" alt="image">
+                       <h3 class="entry-count"># {{ forloop.index }} </h3>
+                    </div>
+
+                    <!-- Begin inline popup content. Class "mfp-hide" is required to make dialog hidden -->
+                    <div id="portfolio-1" class="inline-popup mfp-hide">
+                        <div class="inline-popup-inner">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img class="thumbnail margin-bottom-40" src="{{post.thumbnail}}" alt="image">
+                                </div>
+                                <div class="col-md-8 margin-bottom-20">
+                                    <h1 class="no-margin-top">{{post.title}}</h1>
+                                    <p>{{post.except}}</p>
+                                </div>
+                                <div class="col-md-4 margin-bottom-20 padding-left-40">
+                                    <ul>
+                                        <li>Service: <strong>{{post.service}}</strong></li>
+                                        <li>Date: <strong>{{post.date | date: '%B %d, %Y' }}</strong></li>
+                                                
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+                    </div>
+                    <!-- End inline popup content -->
+
+                </div>
+                <!-- End portfolio grid box 1 -->
+                {% endfor %}
+
+            </div>
+            <!-- End masonry -->
+            
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+</section>
