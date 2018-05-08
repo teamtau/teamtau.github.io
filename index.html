@@ -45,7 +45,7 @@ layout: default
 
 
                     <p class="lead">Specialized in 
-React, React native, Nodejs, Devops, CI/CD, Ansible, AWS..</p>
+React, React native, Nodejs, Devops, CI/CD, Ansible, AWS and a lot more..</p>
 
                 </div> <!-- /.col-inner -->
             </div> <!-- /.col -->
@@ -123,14 +123,14 @@ React, React native, Nodejs, Devops, CI/CD, Ansible, AWS..</p>
                 <!-- Begin portfolio grid box  -->
                 <div class="box box-1 col-md-4 col-sm-6">
                     <div class="box-inner">
-                        <a href="#portfolio-1" class="portfolio-link inline-popup-trigger"></a>
+                        <a href="#portfolio-{{ forloop.index }}" class="portfolio-link inline-popup-trigger"></a>
                         <div class="cover"></div>
                         <img class="thumbnail" src="{{post.thumbnail}}" alt="image">
                        <h3 class="entry-count"># {{ forloop.index }} </h3>
                     </div>
 
                     <!-- Begin inline popup content. Class "mfp-hide" is required to make dialog hidden -->
-                    <div id="portfolio-1" class="inline-popup mfp-hide">
+                    <div id="portfolio-{{ forloop.index }}" class="inline-popup mfp-hide">
                         <div class="inline-popup-inner">
                             <div class="row">
                                 <div class="col-md-12">
@@ -143,7 +143,7 @@ React, React native, Nodejs, Devops, CI/CD, Ansible, AWS..</p>
                                 <div class="col-md-4 margin-bottom-20 padding-left-40">
                                     <ul>
                                         <li>Service: <strong>{{post.service}}</strong></li>
-                                        <li>Date: <strong>{{post.date | date: '%B %d, %Y' }}</strong></li>
+                                        <li>Date: <strong>{{post.date | date: '%B, %Y' }}</strong></li>
                                                 
                                     </ul>
                                 </div>
@@ -154,7 +154,7 @@ React, React native, Nodejs, Devops, CI/CD, Ansible, AWS..</p>
                     <!-- End inline popup content -->
 
                 </div>
-                <!-- End portfolio grid box 1 -->
+                <!-- End portfolio grid box {{ forloop.index }} -->
                 {% endfor %}
 
             </div>
