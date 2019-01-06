@@ -176,24 +176,17 @@
     ///// End Google Analytics /////
     ============================== -->
 
-    <script>
-        
-        $( document ).ready(function() {
-            
-            $.ajax({
-                type:     "GET",
-                crossDomain: true,
-                url:      "https://api.myip.com",
-                dataType: "jsonp",
-                success: function(data){
-                    console.log(data);
-                }
-            });
-            
-          
+    <!---script>
+            $(document).ready(function () {
+             $.ajax({
+                    url: "https://reqres.in/api/users?page=2",
+                    type: "GET",
+                    success: function(response){
+                        console.log(response);
+                    }
+                });
         });
-   </script>
-
+   </script-->
 
     <!-- SLACK channel //--> 
     <!--script src="https://cdn.chatkwik.com/cdn/widget/8bb7f0f14b67f6b08175c998b349573ff2d02c2afc62932db73862664e27a9d7" type="text/javascript"> </script-->
