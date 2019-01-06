@@ -1,7 +1,7 @@
 ## Teamtau
 
 * Run your Jekyll site locally:
-* bundle exec jekyll serve
+* jekyll serve
 * Preview your local Jekyll site in your web browser at http://localhost:4000.
 
 

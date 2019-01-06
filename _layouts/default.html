@@ -68,8 +68,8 @@
             <!-- Begin single links wrapper -->
             <ul class="cd-navigation cd-single-item-wrapper">
                 <li><a href="index.html" class="page-scroll">Home</a></li>
-                <li><a href="index.html#section-3" class="page-scroll">Who We Do</a></
-                <li><a href="index.html#section-11" class="page-scroll">Contact</a></li>
+                <li><a href="index.html#section-3" class="page-scroll">What We Do</a></
+                <li><a href="index.html#section-11" class="page-scroll">Contact Us</a></li>
             </ul>
             <!-- End single links wrapper -->
 
@@ -175,6 +175,24 @@
     <!--==============================
     ///// End Google Analytics /////
     ============================== -->
+
+    <script>
+        
+        $( document ).ready(function() {
+            
+            $.ajax({
+                type:     "GET",
+                crossDomain: true,
+                url:      "https://api.myip.com",
+                dataType: "jsonp",
+                success: function(data){
+                    console.log(data);
+                }
+            });
+            
+          
+        });
+   </script>
 
 
     <!-- SLACK channel //--> 

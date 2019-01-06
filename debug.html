@@ -1,0 +1,14 @@
+---
+# debug.html
+title: debug
+layout: debug
+---
+
+                {% for post in site.categories.portfolio %}
+                {{ forloop.index }}
+				{{post.except}}
+
+				<li>Service: <strong>{{post.service}}</strong></li>
+                <li>Date: <strong>{{post.date | date: '%B, %Y' }}</strong></li>
+
+                {% endfor %}
