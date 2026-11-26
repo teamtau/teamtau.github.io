@@ -4,123 +4,61 @@ title: index
 layout: default
 ---
 
-<!-- Begin intro section (Parallax) -->
-<section id="section-intro" class="intro-parallax full-height">
+<section class="hero hero-photo" style="--photo: url(/assets/img/intro/slider/intro-slide-bg-6.jpg)">
+    <div class="wrap">
+        <div>
+            <h1>Backends, Flutter apps and the pipelines that ship them</h1>
+            <p class="lead">Teamtau is a Stockholm based team of software developers with long experience across a wide range of technologies and industries</p>
+            <div class="actions">
+                <a class="btn btn-primary" href="mailto:hello@teamtau.com">Say hello</a>
+                <a class="btn" href="#section-3">What we do</a>
+            </div>
+        </div>
 
-    <!-- Element background image (parallax) -->
-    <div class="full-cover intro-parallax-image bg-image" style="background-image: url(assets/img/intro/slider/intro-slide-bg-2.jpg);"></div>
-	
-    <!-- Element cover -->
-    <div class="cover"></div>
-
-    <!-- Intro caption -->
-    <div class="intro-caption intro-parallax-caption text-white">
-        <h1>
-            <span class="bg-main text-white">Teamtau</span> software and devops 
-        </h1>
-        <p></p>
+        <!-- Illustrative pipeline run, not live data -->
+        <div class="run" role="img" aria-label="Example pipeline run: build, test, staging and production all passed in 4 minutes 12 seconds">
+            <div class="run-head"><span><strong>deploy</strong> #482 on main</span><span>passed in 4m 12s</span></div>
+            <ul class="run-stages">
+                <li><span>build</span><span class="cmd">dotnet publish -c Release</span><span class="time">48s</span></li>
+                <li><span>test</span><span class="cmd">312 passed, 0 failed</span><span class="time">1m 36s</span></li>
+                <li><span>staging</span><span class="cmd">ansible-playbook deploy.yml -l staging</span><span class="time">52s</span></li>
+                <li><span>production</span><span class="cmd">ansible-playbook deploy.yml -l production</span><span class="time">56s</span></li>
+            </ul>
+<pre class="run-log">14:02:13  staging     health check 200 OK
+14:03:07  production  rolling update 3/3
+14:03:09  production  health check 200 OK</pre>
+        </div>
     </div>
-
-    {% include_relative _includes/github.html %}
-
-    <!-- Scroll down arrow -->
-    <a class="scroll-down-arrow page-scroll text-center" href="#section-3"><span class="text-white"><i class="fa fa-arrow-down"></i></span></a>
-
 </section>
 
+<section id="section-3" class="section">
+    <div class="wrap">
+        <h2>What we do</h2>
+        <p class="lead">Whether you need specific skills or ongoing support, we have the people to help you</p>
 
-<!-- Section 3 -->
-<section id="section-3" class="work split-box bg-image" style="background-image: url(assets/img/work-bg.jpg);">
+        <div class="work-grid">
+            <dl class="stack">
+                <div><dt>Backend</dt><dd>.NET, Java, Rust, Python</dd></div>
+                <div><dt>Mobile</dt><dd>Flutter for cross-platform apps</dd></div>
+                <div><dt>Cloud and DevOps</dt><dd>AWS, Azure and Google Cloud with full CI/CD automation</dd></div>
+                <div><dt>Platform</dt><dd>Firebase, microservices, containerization</dd></div>
+                <div><dt>AI</dt><dd>Machine learning, AI integration, data-driven solutions</dd></div>
+            </dl>
 
-    <!-- element cover -->
-    <div class="cover"></div>
-
-    <div class="container-fluid text-white">
-        <div class="row">
-
-            <div class="row-same-height"> 
-
-                <div class="col-left col-lg-6 col-lg-height col-middle no-padding">
-                    <div class="col-inner">
-
-                        <!-- Begin Heading -->
-                        <div class="heading heading-xlg">
-                            <h1><span class="bg-white text-dark">What</span><span class="bg-main text-white">We Do</span></h1>
-                        </div>
-                        <!-- End Heading -->
-
-                        <p class="lead">					
-							Our core expertise includes:<br/>
-							- Backend: .NET, Java, Rust, Python<br/>
-							- Mobile: Flutter for cross-platform apps<br/>
-							- Cloud & DevOps: AWS, Azure, Google Cloud with full CI/CD automation<br/>
-							- Modern Tech: Firebase, microservices, containerization<br/>
-							- AI & Intelligence: Machine learning, AI integration, data-driven solutions
-						</p>
-
-                        <p class="lead">
-                            Our team are highly skilled Stockholm based software developers who have long-term experience across a wide range of technologies and industries. Whether you need specific skills or ongoing support, we have the people to help you.
-                        </p>
-
-                        <br>
-                        <a href="mailto:hello@teamtau.se" target="_blank" class="btn btn-danger btn-rounded btn-lg">say hello <i class="fa fa-paper-plane-o"></i></a>
-
-                    </div> <!-- /.col-inner -->
-                </div> <!-- /.col -->
-
-                <div class="col-right col-lg-6 col-lg-height">
-                    <div class="col-inner">
-
-                        <!-- Begin info box -->
-                        <div class="info-box-wrapper">
-                            <div class="row">
-
-								<div class="col col-12 col-md-6">
-                                    <div class="info-box">
-                                        <div class="info-box-heading">
-                                            <h3>Automated</h3>
-                                            <div class="divider"></div>
-                                        </div>
-                                        <div class="info-box-info">
-                                            <p>We love CI/CI and we are sure we can help you automated your deployment to staging and production using Ansible.</p>
-                                        </div>
-                                    </div>
-                                </div>
-								
-							   <div class="col col-12 col-md-6">
-                                    <div class="info-box">
-                                        <div class="info-box-heading">
-                                            <h3>Mobile</h3>
-                                            <div class="divider"></div>
-                                        </div>
-                                        <div class="info-box-info">
-                                            <p>Flutter is Google's new, efficient UI tool for quickly and easily assembling well-designed apps, our first choice when developing mobile apps today.</p>
-                                        </div>
-                                    </div>
-                                </div>
-				
-					   <div class="col col-12 col-md-6">
-                                    <div class="info-box">
-                                        <div class="info-box-heading">
-                                            <h3>Using the Latest Tech</h3>
-                                            <div class="divider"></div>
-                                        </div>
-                                        <div class="info-box-info">
-                                            <p>Whether it's a sleek mobile app, a powerful enterprise system, or an innovative AI solution, we bring ideas to life with cutting-edge technology. Our expertise spans the latest frameworks, languages, and tools—ensuring every project, big or small, is built for performance, scalability, and future growth.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                
-                            </div> <!-- /.row -->
-                        </div>
-                        <!-- End info box -->
-
-                    </div> <!-- /.col-inner -->
-                </div> <!-- /.col -->
+            <div class="practice">
+                <div>
+                    <h3>Automated</h3>
+                    <p>We set up CI/CD and automate your deployment to staging and production with Ansible</p>
+                </div>
+                <div>
+                    <h3>Mobile</h3>
+                    <p>Flutter is our first choice for mobile apps, one codebase for iOS and Android</p>
+                </div>
+                <div>
+                    <h3>Current tech</h3>
+                    <p>Mobile apps, enterprise systems and AI integrations, built with current frameworks and tools for performance, scalability and future growth</p>
+                </div>
             </div>
-            <!-- End responsive columns of same height -->
-
-        </div> <!-- /.row -->
-    </div> <!-- /.container -->
+        </div>
+    </div>
 </section>
