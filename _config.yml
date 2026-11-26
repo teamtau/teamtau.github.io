@@ -6,3 +6,7 @@ plugins:
     - jekyll-feed
 #    - jekyll_version_plugin
 
+
+# Not site content, and its Liquid examples break the Pages build
+exclude:
+    - CLAUDE.md
